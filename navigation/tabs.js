@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   View,
   Text,
@@ -17,19 +17,9 @@ import NewsScreen from "../screens/NewsScreen";
 import FindScreen from "../screens/FindScreen";
 import MenuScreen from "../screens/MenuScreen";
 import InesMapScreen from "../screens/InesMapScreen";
-import ChatScreen from "../screens/ChatScreen";
-import Administration from "../screens/AdministrationScreen";
-import Faculities from "../screens/FaculitiesScreen";
-import Finance from "../screens/FinanceScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
-
-// const HomeStack = () => (
-//   <Stack.Navigator>
-//     <Stack.Screen name="home" component={HomeScreen} />
-//   </Stack.Navigator>
-// );
 
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity
@@ -54,19 +44,6 @@ const CustomTabBarButton = ({ children, onPress }) => (
   </TouchableOpacity>
 );
 const Tabs = () => {
-  let ActionSheet = useRef();
-  let optionArray = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    "Option 4",
-    "Option 5",
-    "Cancel",
-  ];
-
-  const showActionSheet = () => {
-    ActionSheet.current.show();
-  };
   return (
     <Tab.Navigator
       screenOptions={{
@@ -160,8 +137,19 @@ const Tabs = () => {
         name="Menu"
         component={MenuScreen}
         options={{
+          headerTitle: () => (
+            <Image
+              source={require("../assets/logo.png")}
+              style={{ width: 150, height: 50 }}
+              resizeMode="contain"
+            />
+          ),
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#fff",
+          },
           tabBarIcon: ({ focused }) => (
-            <View className="w-[30px] h-[30px]" onPress={showActionSheet}>
+            <View className="w-[30px] h-[30px]">
               <Icon
                 name="grid-outline"
                 size={30}

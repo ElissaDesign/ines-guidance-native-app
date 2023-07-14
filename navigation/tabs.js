@@ -25,7 +25,7 @@ const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity
     onPress={onPress}
     style={{
-      top: -30,
+      top: 0,
       justifyContent: "center",
       alignItems: "center",
       ...styles.shadow,
@@ -51,13 +51,13 @@ const Tabs = () => {
         tabBarStyle: [
           {
             position: "absolute",
-            bottom: 25,
+            bottom: 6,
             right: 20,
             left: 20,
             elevation: 0,
             backgroundColor: "#DCEBF5",
             borderRadius: 15,
-            height: 90,
+            height: 60,
             ...styles.shadow,
           },
           null,
@@ -80,7 +80,7 @@ const Tabs = () => {
             backgroundColor: "#fff",
           },
           tabBarIcon: ({ focused }) => (
-            <View className="flex flex-col items-center justify-center top-[10px]">
+            <View className="flex flex-col items-center justify-center top-[6px] bottom-[6px]">
               <Icon
                 name="home-outline"
                 size={30}
@@ -115,7 +115,7 @@ const Tabs = () => {
             backgroundColor: "#fff",
           },
           tabBarIcon: ({ focused }) => (
-            <View className="flex flex-col items-center justify-center top-[10px]">
+            <View className="flex flex-col items-center justify-center top-[6px] bottom-[6px]">
               <Icon
                 name="newspaper-outline"
                 size={30}
@@ -179,7 +179,7 @@ const Tabs = () => {
             backgroundColor: "#fff",
           },
           tabBarIcon: ({ focused }) => (
-            <View className="flex flex-col items-center justify-center top-[10px]">
+            <View className="flex flex-col items-center justify-center top-[6px] bottom-[6px]">
               <Icon
                 name="search-outline"
                 size={30}
@@ -214,7 +214,7 @@ const Tabs = () => {
             backgroundColor: "#fff",
           },
           tabBarIcon: ({ focused }) => (
-            <View className="flex flex-col items-center justify-center top-[10px]">
+            <View className="flex flex-col items-center justify-center top-[6px] bottom-[6px]">
               <Icon
                 name="map-outline"
                 size={30}

@@ -3,27 +3,14 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-import Tabs from "./navigation/tabs";
-// import { createNativeStackNavigator } from "@react-navigation/native-stack";
-// import HomeScreen from "./screens/HomeScreen";
+import StackNavigator from "./navigation/stack";
 
-// const Stack = createNativeStackNavigator();
-
-// export default function App() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator>
-//         <Stack.Screen name="Home" component={HomeScreen} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
 const App = () => {
   return (
     <NavigationContainer>
-      <Tabs />
+      <StackNavigator/>
       <TouchableOpacity style={styles.touchableOpacity}>
-        <Icon name="chatbubbles-outline" size={30} color="#515355" />
+        <Icon name="chatbubbles-outline" size={30} color="#FFF" />
       </TouchableOpacity>
     </NavigationContainer>
   );
@@ -37,8 +24,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     right: 30,
-    bottom: 140,
-    backgroundColor: "#DCEBF5",
+    bottom: 80,
+    backgroundColor: "#3287C2",
     borderRadius: 50,
   },
   floatingButton: {

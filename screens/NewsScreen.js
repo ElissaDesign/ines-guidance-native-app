@@ -50,13 +50,13 @@ const NewsScreen = ({ navigation }) => {
   ];
   return (
     <SafeAreaView className="h-screen bg-[#F5F9FC]">
-      <ScrollView>
+      <ScrollView className="mx-2">
         <View className="flex flex-row items-center justify-center my-6 ">
           <View className="flex flex-col items-center justify-center">
             <Text className="text-xl font-bold">Trending news</Text>
           </View>
         </View>
-        <View className="flex flex-col items-center justify-center top-[10px]">
+        <View className="flex flex-col items-center justify-center top-[10px] px-2">
           {news.map((newsItem, index) => (
             <View key={newsItem?.id} className="mb-4 px-4">
               <Text className="text-xl font-bold my-2 text-center">
@@ -75,7 +75,7 @@ const NewsScreen = ({ navigation }) => {
                   source={{ uri: newsItem?.image }}
                 />
               </View>
-              <Text className="text-base font-medium my-2 text-[#515355] text-center">
+              <Text className="text-base my-2 text-[#515355] text-center px-2">
                 {newsItem?.text}
               </Text>
             </View>

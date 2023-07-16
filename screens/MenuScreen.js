@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const MenuScreen = ({}) => {
@@ -14,46 +9,70 @@ const MenuScreen = ({}) => {
       <View className="justify-center my-2 px-4 ">
         <View>
           <Text className="text-center text-xl my-2 ">MenuScreen</Text>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Administration")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Administration
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Finance")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Finance
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Programs")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Programs
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Registration")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Registration
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Departments")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Departments
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Partners")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
-              INES Sponsorship
+              INES Partnership
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Student Union")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Student Union
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Status Images")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Status
             </Text>
-          </View>
+          </TouchableOpacity>
           <View className="flex items-center justify-center">
             <TouchableOpacity
               className="w-16 mt-20 bg-[#3287C2] rounded-lg shadow-md py-[10px]"

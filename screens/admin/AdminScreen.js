@@ -10,7 +10,7 @@ const MenuScreen = ({}) => {
         <View>
           <Text className="text-center text-xl my-2 ">Add Information</Text>
           <TouchableOpacity
-            onPress={() => navigation.navigate("Ines Administration")}
+            onPress={() => navigation.navigate("Administration")}
             className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
           >
             <Text className=" text-center text-base text-white">
@@ -42,16 +42,29 @@ const MenuScreen = ({}) => {
               INES Sponsorship
             </Text>
           </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Student Union")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Student Union
             </Text>
-          </View>
-          <View className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]">
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Ines Status")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
             <Text className=" text-center text-base text-white">
               INES Status
             </Text>
-          </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate("News")}
+            className="w-full my-[4px] bg-[#3287C2] rounded-lg shadow-md py-[10px]"
+          >
+            <Text className=" text-center text-base text-white">INES News</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>

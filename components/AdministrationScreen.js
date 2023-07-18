@@ -7,15 +7,8 @@ import {
   Image,
   Linking,
 } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
 import { db } from "../Firebase";
-import {
-  collection,
-  getDocs,
-  deleteDoc,
-  query,
-  where,
-} from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { DataTable } from "react-native-paper";
 import { TouchableOpacity } from "react-native";
 
@@ -31,6 +24,11 @@ export default function () {
     },
     {
       number: "02",
+      name: "Dr. MUKAZAYIRE Marie Jeanne",
+      position: "Vice Chairperson",
+    },
+    {
+      number: "03",
       name: "Dr. MUKAZAYIRE Marie Jeanne",
       position: "Vice Chairperson",
     },
@@ -62,7 +60,7 @@ export default function () {
   return (
     <ScrollView className="bg-white h-[100%]">
       <SafeAreaView className="bg-white">
-        <View className="flex flex-col items-center justify-center my-4 ">
+        <View className="w-[95%] mx-auto mt-4">
           <Text className="text-xl font-bold">The Ines Administration</Text>
           <Text className="text-base my-2 text-[#515355] text-center px-2">
             The Ines Administration is a governing part of university of Ines
@@ -135,14 +133,12 @@ export default function () {
           <View className="bg-[#F5F9FC] w-full">
             <DataTable>
               <DataTable.Header>
-                <DataTable.Title>#</DataTable.Title>
                 <DataTable.Title>Names</DataTable.Title>
                 <DataTable.Title>Position</DataTable.Title>
               </DataTable.Header>
               {positions.map((data) => {
                 return (
                   <DataTable.Row key={data.number}>
-                    <DataTable.Cell>{data.number}</DataTable.Cell>
                     <DataTable.Cell>{data.name}</DataTable.Cell>
                     <DataTable.Cell>{data.position}</DataTable.Cell>
                   </DataTable.Row>
